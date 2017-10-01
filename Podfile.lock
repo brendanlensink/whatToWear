@@ -1,0 +1,29 @@
+PODS:
+  - Alamofire (4.5.1)
+  - Hue (2.0.1)
+  - ReactiveAlamofire (3.0.0):
+    - Alamofire (~> 4.5)
+    - ReactiveSwift (~> 2.0)
+  - ReactiveSwift (2.0.1):
+    - Result (~> 3.2)
+  - Result (3.2.3)
+  - SnapKit (4.0.0)
+
+DEPENDENCIES:
+  - Alamofire (~> 4.5)
+  - Hue
+  - ReactiveAlamofire
+  - ReactiveSwift
+  - SnapKit (~> 4.0.0)
+
+SPEC CHECKSUMS:
+  Alamofire: 2d95912bf4c34f164fdfc335872e8c312acaea4a
+  Hue: 354caec055fdc9d38b5ef33ca2e7224721843baf
+  ReactiveAlamofire: 0d7b3234e4737dc20186b1f66725a16785e2e508
+  ReactiveSwift: 60a29ff35988a964fd2bb759755cb6594de523fc
+  Result: 128640a6347e8d2ae48b142556739a2d13f90ce6
+  SnapKit: a42d492c16e80209130a3379f73596c3454b7694
+
+PODFILE CHECKSUM: 4591df9ab5cd17c6b63d437cb916303acf8c1da8
+
+COCOAPODS: 1.3.1
