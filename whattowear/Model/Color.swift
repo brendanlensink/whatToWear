@@ -11,12 +11,12 @@ import UIKit
 
 struct Color {
     struct Background {
-        static let top = UIColor(hex: "95eef1")
-        static let bottom = UIColor(hex: "88dee1")
+        static let top = UIColor(hex: "689ECC")
+        static let bottom = UIColor(hex: "67BACA")
     }
 
     struct Text {
-        static let main = UIColor(hex: "000000")
-        static let secondary = UIColor(hex: "3F3F3F")
+        static let main = UIColor(hex: "FFFFFF")
+        static let secondary = UIColor(hex: "ACD4DC")
     }
 }
