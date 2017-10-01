@@ -80,12 +80,14 @@ class MainViewController: UIViewController {
 
         weatherImageView = UIImageView()
         weatherImageView.contentMode = .scaleAspectFit
-        weatherImageView.tintColor = Color.imageTint
+        weatherImageView.tintColor = Color.imageTint.alpha(0.6)
         displayView.addSubview(weatherImageView)
 
         weatherImageView.snp.makeConstraints { make in
-            make.height.width.equalTo(100)
+            make.height.width.equalTo(200)
             make.centerX.equalTo(view)
+            make.left.greaterThanOrEqualTo(view)
+            make.right.lessThanOrEqualTo(view)
             make.top.equalTo(headerLabel.snp.bottom).offset(Padding.top)
         }
 
@@ -109,7 +111,7 @@ class MainViewController: UIViewController {
         }
 
         let loadingSpinner = UIActivityIndicatorView()
-        loadingSpinner.activityIndicatorViewStyle = .gray
+        loadingSpinner.activityIndicatorViewStyle = .whiteLarge
         loadingSpinner.startAnimating()
         loadingView.addSubview(loadingSpinner)
 
@@ -120,6 +122,8 @@ class MainViewController: UIViewController {
         let loadingLabel = UILabel()
         loadingLabel.text = "Checking the weather..."
         loadingLabel.textAlignment = .center
+        loadingLabel.font = Font.header
+        loadingLabel.textColor = Color.Text.secondary
         loadingView.addSubview(loadingLabel)
 
         loadingLabel.snp.makeConstraints { make in
