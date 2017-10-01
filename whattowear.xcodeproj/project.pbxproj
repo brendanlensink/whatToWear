@@ -16,6 +16,11 @@
 		B3E3A2E41F76F37C002709A1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3E3A2E31F76F37C002709A1 /* AppDelegate.swift */; };
 		B3E3A2EB1F76F37C002709A1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B3E3A2EA1F76F37C002709A1 /* Assets.xcassets */; };
 		B3E3A2EE1F76F37C002709A1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B3E3A2EC1F76F37C002709A1 /* LaunchScreen.storyboard */; };
+		B3F54E1C1F815C87002B58D6 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3F54E1B1F815C87002B58D6 /* Color.swift */; };
+		B3F54E1E1F815DA6002B58D6 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3F54E1D1F815DA6002B58D6 /* GradientView.swift */; };
+		B3F54E221F81625D002B58D6 /* Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3F54E211F81625D002B58D6 /* Font.swift */; };
+		B3F54E281F81657F002B58D6 /* Nunito-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B3F54E271F816570002B58D6 /* Nunito-SemiBold.ttf */; };
+		B3F54E291F81657F002B58D6 /* Nunito-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B3F54E261F816551002B58D6 /* Nunito-Regular.ttf */; };
 		F1BA10B3054CEDDBD98F13A8 /* Pods_whattowear.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 975F4680F021E8AB3AEA383D /* Pods_whattowear.framework */; };
 /* End PBXBuildFile section */
 
@@ -34,6 +39,11 @@
 		B3E3A2EA1F76F37C002709A1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B3E3A2ED1F76F37C002709A1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B3E3A2EF1F76F37C002709A1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B3F54E1B1F815C87002B58D6 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
+		B3F54E1D1F815DA6002B58D6 /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
+		B3F54E211F81625D002B58D6 /* Font.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Font.swift; sourceTree = "<group>"; };
+		B3F54E261F816551002B58D6 /* Nunito-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-Regular.ttf"; sourceTree = "<group>"; };
+		B3F54E271F816570002B58D6 /* Nunito-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-SemiBold.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +72,8 @@
 				B3125F611F784F56007C358A /* WeatherResponse.swift */,
 				B3AE96E21F79CEEC00FD3682 /* Wear.swift */,
 				B3AE96E71F79D21900FD3682 /* Conditions.swift */,
+				B3F54E1B1F815C87002B58D6 /* Color.swift */,
+				B3F54E211F81625D002B58D6 /* Font.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -86,6 +98,7 @@
 			isa = PBXGroup;
 			children = (
 				B3AE96E51F79D03E00FD3682 /* Double+ToTemperature.swift */,
+				B3F54E1D1F815DA6002B58D6 /* GradientView.swift */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -117,6 +130,8 @@
 				B38BDE1C1F76FD2C004F7EB8 /* ViewModel */,
 				B3E3A2E31F76F37C002709A1 /* AppDelegate.swift */,
 				B3E3A2EA1F76F37C002709A1 /* Assets.xcassets */,
+				B3F54E271F816570002B58D6 /* Nunito-SemiBold.ttf */,
+				B3F54E261F816551002B58D6 /* Nunito-Regular.ttf */,
 				B3E3A2EC1F76F37C002709A1 /* LaunchScreen.storyboard */,
 				B3E3A2EF1F76F37C002709A1 /* Info.plist */,
 			);
@@ -194,6 +209,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B3F54E281F81657F002B58D6 /* Nunito-SemiBold.ttf in Resources */,
+				B3F54E291F81657F002B58D6 /* Nunito-Regular.ttf in Resources */,
 				B3E3A2EE1F76F37C002709A1 /* LaunchScreen.storyboard in Resources */,
 				B3E3A2EB1F76F37C002709A1 /* Assets.xcassets in Resources */,
 			);
@@ -272,11 +289,14 @@
 			files = (
 				B3AE96E81F79D21900FD3682 /* Conditions.swift in Sources */,
 				B3AE96E61F79D03E00FD3682 /* Double+ToTemperature.swift in Sources */,
+				B3F54E221F81625D002B58D6 /* Font.swift in Sources */,
 				B3125F621F784F56007C358A /* WeatherResponse.swift in Sources */,
 				B38BDE1A1F76FD18004F7EB8 /* MainViewController.swift in Sources */,
 				B3AE96E31F79CEEC00FD3682 /* Wear.swift in Sources */,
+				B3F54E1C1F815C87002B58D6 /* Color.swift in Sources */,
 				B3E3A2E41F76F37C002709A1 /* AppDelegate.swift in Sources */,
 				B38BDE181F76FCA8004F7EB8 /* MainViewModel.swift in Sources */,
+				B3F54E1E1F815DA6002B58D6 /* GradientView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -36,10 +36,19 @@ class MainViewController: UIViewController {
 
         viewModel = MainViewModel()
 
+        let backgroundView = GradientView(frame: CGRect.zero)
+        backgroundView.startColor = Color.Background.top
+        backgroundView.endColor = Color.Background.bottom
+        view.addSubview(backgroundView)
+
+        backgroundView.snp.makeConstraints { make in make.edges.equalTo(view) }
+
         let titleLabel = UILabel()
         titleLabel.numberOfLines = 0
         titleLabel.textAlignment = .center
         titleLabel.text = viewModel.getTitleText()
+        titleLabel.font = Font.title
+        titleLabel.textColor = Color.Text.secondary
         view.addSubview(titleLabel)
 
         titleLabel.snp.makeConstraints { make in
@@ -60,6 +69,8 @@ class MainViewController: UIViewController {
         headerLabel = UILabel()
         headerLabel.numberOfLines = 0
         headerLabel.textAlignment = .center
+        headerLabel.font = Font.header
+        headerLabel.textColor = Color.Text.main
         displayView.addSubview(headerLabel)
 
         headerLabel.snp.makeConstraints { make in
@@ -72,15 +83,16 @@ class MainViewController: UIViewController {
         displayView.addSubview(imageView)
 
         imageView.snp.makeConstraints { make in
-            make.height.equalTo(imageView.snp.width)
+            make.height.width.equalTo(100)
+            make.centerX.equalTo(view)
             make.top.equalTo(headerLabel.snp.bottom).offset(Padding.top)
-            make.left.equalTo(headerLabel).offset(50)
-            make.right.equalTo(headerLabel).offset(-50)
         }
 
         footerLabel = UILabel()
         footerLabel.numberOfLines = 0
         footerLabel.textAlignment = .center
+        footerLabel.font = Font.footer
+        footerLabel.textColor = Color.Text.main
         displayView.addSubview(footerLabel)
 
         footerLabel.snp.makeConstraints { make in
