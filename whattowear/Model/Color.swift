@@ -10,6 +10,8 @@ import Hue
 import UIKit
 
 struct Color {
+    static let imageTint = UIColor(hex: "C7E6Ed")
+
     struct Background {
         static let top = UIColor(hex: "689ECC")
         static let bottom = UIColor(hex: "67BACA")

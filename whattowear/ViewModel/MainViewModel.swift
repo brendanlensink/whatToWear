@@ -74,6 +74,22 @@ class MainViewModel {
         return getWear(forWeather: weatherResponse).image
     }
 
+    func getWeatherImage(forWeather weatherResponse: WeatherResponse) -> UIImage? {
+        guard let weather = weatherResponse.weather.first else {
+            // TODO: handle this better
+            fatalError("Failed to unwrap weather")
+        }
+
+        switch weather.main {
+        case .clear: return #imageLiteral(resourceName: "sun")
+        case .clouds: return #imageLiteral(resourceName: "cloud")
+        case .drizzle, .rain: return #imageLiteral(resourceName: "cloudrain")
+        case .thunderstorm: return #imageLiteral(resourceName: "cloudthunder")
+        case .snow: return #imageLiteral(resourceName: "cloudsnow")
+        default: return nil
+        }
+    }
+
     func getFooterText(forWeather weatherResponse: WeatherResponse) -> String {
 
         // decide what clothing to weather
@@ -114,7 +130,6 @@ class MainViewModel {
     }
 
     private func getWear(forWeather weatherResponse: WeatherResponse) -> Wear {
-
         guard let weather = weatherResponse.weather.first else {
             // TODO: handle this better
             fatalError("Failed to unwrap weather")

@@ -26,7 +26,7 @@ class MainViewController: UIViewController {
     private var loadingView: UIView!
     private var displayView: UIView!
     private var headerLabel: UILabel!
-    private var imageView: UIImageView!
+    private var weatherImageView: UIImageView!
     private var footerLabel: UILabel!
 
     // MARK: View Lifecycle
@@ -78,11 +78,12 @@ class MainViewController: UIViewController {
             make.leading.trailing.equalTo(titleLabel)
         }
 
-        imageView = UIImageView()
-        imageView.contentMode = .scaleAspectFit
-        displayView.addSubview(imageView)
+        weatherImageView = UIImageView()
+        weatherImageView.contentMode = .scaleAspectFit
+        weatherImageView.tintColor = Color.imageTint
+        displayView.addSubview(weatherImageView)
 
-        imageView.snp.makeConstraints { make in
+        weatherImageView.snp.makeConstraints { make in
             make.height.width.equalTo(100)
             make.centerX.equalTo(view)
             make.top.equalTo(headerLabel.snp.bottom).offset(Padding.top)
@@ -96,7 +97,7 @@ class MainViewController: UIViewController {
         displayView.addSubview(footerLabel)
 
         footerLabel.snp.makeConstraints { make in
-            make.top.equalTo(imageView.snp.bottom).offset(Padding.top)
+            make.top.equalTo(weatherImageView.snp.bottom).offset(Padding.top)
             make.leading.trailing.equalTo(headerLabel)
         }
 
@@ -138,10 +139,8 @@ class MainViewController: UIViewController {
             self.displayView.isHidden = false
 
             self.headerLabel.text = self.viewModel.getHeaderText(forWeather: weatherResponse)
-            self.imageView.image = self.viewModel.getImage(forWeather: weatherResponse)
+            self.weatherImageView.image = self.viewModel.getWeatherImage(forWeather: weatherResponse)
             self.footerLabel.text = self.viewModel.getFooterText(forWeather: weatherResponse)
-
-
         }
 
         viewModel.errorSignal.observeValues { errorString in                                    let alert = UIAlertController(title: "Uh oh!", message: "Something went wrong \n \(errorString)", preferredStyle: UIAlertControllerStyle.alert)
